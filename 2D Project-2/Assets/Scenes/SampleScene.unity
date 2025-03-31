@@ -154,9 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTimer: 0
   spawnInterval: 1
+  enemyTimer2: 0
+  spawnInterval2: 1
   xBounds: {x: -50, y: 50}
   yBounds: {x: -20, y: 20}
   enemy: {fileID: 6649169753097722401, guid: 455b3665c84c23943bcbbaf821743dc2, type: 3}
+  enemyBreacher: {fileID: 0}
   enemyCounter: 0
   spawnLimit: 20
 --- !u!4 &368354943
@@ -171,7 +174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -269,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113178087352863188, guid: 151234dd9dfc74549a9fff7d36e2407e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5113178087352863188, guid: 151234dd9dfc74549a9fff7d36e2407e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -377,7 +380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5113178086560168854
 PrefabInstance:
@@ -392,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113178087352863188, guid: 151234dd9dfc74549a9fff7d36e2407e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5113178087352863188, guid: 151234dd9dfc74549a9fff7d36e2407e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -453,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6085307521403536819, guid: 4802a32410c0b904a838d9b3cc4449bf, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6085307521403536819, guid: 4802a32410c0b904a838d9b3cc4449bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -495,6 +498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6085307521403536828, guid: 4802a32410c0b904a838d9b3cc4449bf, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4795596510232282003, guid: be3136de00b74d4439132e20d846fe79, type: 3}
     - target: {fileID: 6085307522592991913, guid: 4802a32410c0b904a838d9b3cc4449bf, type: 3}
       propertyPath: m_Camera
       value: 
@@ -514,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6649169753097722429, guid: 455b3665c84c23943bcbbaf821743dc2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6649169753097722429, guid: 455b3665c84c23943bcbbaf821743dc2, type: 3}
       propertyPath: m_LocalPosition.x
