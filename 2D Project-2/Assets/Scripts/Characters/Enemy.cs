@@ -30,7 +30,8 @@ public class Enemy : CharacterBase
     // Update is called once per frame
     void Update()
     {
-        manager = FindObjectOfType<GameManager>();
+      //Display
+      //manager = FindObjectOfType<GameManager>();
         thisObject.transform.position += new Vector3(xDir, yDir, 0) * speed;
         reverseTime += Time.deltaTime;
         if (reverseTime >= reverseInterval)
@@ -40,10 +41,10 @@ public class Enemy : CharacterBase
             yDir = yDir * -1;
         }
 
-        if (health <= 0)
+      //if (health <= 0)
         {
-            manager.enemyCounter--;
-            Destroy(gameObject);
+          //manager.enemyCounter--;
+          //Destroy(gameObject);
         }
     }
 
