@@ -23,10 +23,9 @@ public class CharacterBase : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        void DisplayHealth()
-        {
-            displayHealth.text = "Health: " + health;
-        }
+    }
+    void DisplayHealth()
+    {
+        displayHealth.text = "Health: " + health;
     }
 }

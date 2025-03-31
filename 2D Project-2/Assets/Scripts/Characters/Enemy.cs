@@ -50,9 +50,9 @@ public class Enemy : CharacterBase
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Bomb")
+        if (other.tag == "Projectile")
         {
-            health = health - 5;
+            health = health - 10;
             Destroy(other.gameObject);
         }
     }
