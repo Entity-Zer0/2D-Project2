@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyTimer2 >= spawnInterval2 && enemyCounter < spawnLimit)
         {
-            enemyTimer = 0f;
+            enemyTimer = 0;
             Instantiate(enemyBreacher, targetPos, Quaternion.identity);
             enemyCounter++;
         }

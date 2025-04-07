@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
-  m_Color: {r: 0.8018868, g: 0.2790833, b: 0, a: 1}
+  m_Color: {r: 0.8, g: 0.41473013, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,6 +101,9 @@ MonoBehaviour:
   characterName: 
   health: 100
   displayHealth: {fileID: 6085307521555067472}
+  projectile: {fileID: 0}
+  spawnTimer: 0
+  spawnInterval: 1
 --- !u!61 &6085307521403536829
 BoxCollider2D:
   m_ObjectHideFlags: 0
