@@ -49,9 +49,10 @@ public class GameManager : MonoBehaviour
             enemyCounter++;
         }
 
+
         if (enemyTimer2 >= spawnInterval2 && enemyCounter < spawnLimit)
         {
-            enemyTimer = 0;
+            enemyTimer2 = 0;
             Instantiate(enemyBreacher, targetPos, Quaternion.identity);
             enemyCounter++;
         }

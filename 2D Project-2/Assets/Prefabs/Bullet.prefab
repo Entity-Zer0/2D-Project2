@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5102830410896604215}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,9 @@ MonoBehaviour:
   thisObject: {fileID: 4795596510232282003}
   xDir: 0
   yDir: 0
-  lifeTime: 3
+  lifeTime: 2.5
   timer: 0
+  targetEnemy: {fileID: 0}
 --- !u!58 &-5102830410896604215
 CircleCollider2D:
   m_ObjectHideFlags: 0

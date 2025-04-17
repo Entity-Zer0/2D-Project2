@@ -30,8 +30,10 @@ public class Enemy : CharacterBase
     // Update is called once per frame
     void Update()
     {
-      //Display
-      //manager = FindObjectOfType<GameManager>();
+        DisplayHealth();
+        Health();
+        //Display
+        //manager = FindObjectOfType<GameManager>();
         thisObject.transform.position += new Vector3(xDir, yDir, 0) * speed;
         reverseTime += Time.deltaTime;
         if (reverseTime >= reverseInterval)
@@ -40,12 +42,7 @@ public class Enemy : CharacterBase
             xDir = xDir * -1;
             yDir = yDir * -1;
         }
-
-      //if (health <= 0)
-        {
-          //manager.enemyCounter--;
-          //Destroy(gameObject);
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -54,6 +51,15 @@ public class Enemy : CharacterBase
         {
             health = health - 10;
             Destroy(other.gameObject);
+        }
+    }
+
+    public override void Health()
+    {
+        if (health <= 0)
+        {
+            //gameManager.enemyCounter--;
+            Destroy(gameObject);
         }
     }
 }

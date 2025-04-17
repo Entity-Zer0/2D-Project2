@@ -10,6 +10,7 @@ public class Towers : CharacterBase
 
     private void Update()
     {
+        DisplayHealth();
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
