@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Towers : CharacterBase
+public class Catapult : CharacterBase
 {
     public GameObject projectile;
     public float spawnTimer = 0f;
-    public float spawnInterval = 0.5f;
-
+    public float spawnInterval = 2.0f;
 
     private void Update()
     {
@@ -18,7 +17,7 @@ public class Towers : CharacterBase
             Instantiate(projectile, transform.position, Quaternion.identity);
             spawnTimer = 0f;
         }
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
