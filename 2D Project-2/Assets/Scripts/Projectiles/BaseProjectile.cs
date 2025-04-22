@@ -28,7 +28,7 @@ public class BaseProjectile : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        thisObject.transform.position += new Vector3(xDir, yDir, 0) * speed;
+        //thisObject.transform.position += new Vector3(xDir, yDir, 0) * speed;
         if(timer >= lifeTime)
         {
             Destroy(gameObject);

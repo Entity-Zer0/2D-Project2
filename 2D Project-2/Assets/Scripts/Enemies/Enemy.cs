@@ -33,7 +33,7 @@ public class Enemy : CharacterBase
         DisplayHealth();
         Health();
         //Display
-        //manager = FindObjectOfType<GameManager>();
+        manager = FindObjectOfType<GameManager>();
         thisObject.transform.position += new Vector3(xDir, yDir, 0) * speed;
         reverseTime += Time.deltaTime;
         if (reverseTime >= reverseInterval)
@@ -58,7 +58,7 @@ public class Enemy : CharacterBase
     {
         if (health <= 0)
         {
-            //gameManager.enemyCounter--;
+            manager.enemyCounter--;
             Destroy(gameObject);
         }
     }

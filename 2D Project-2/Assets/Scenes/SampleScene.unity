@@ -4916,7 +4916,7 @@ PrefabInstance:
     - target: {fileID: 2715808796892913691, guid: abcb9d62e0cd31840aa9dea9ee2844f8, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7716287069444752599, guid: 2e1396ec062e92549a0069aad363380f, type: 3}
     - target: {fileID: 2715808796892913693, guid: abcb9d62e0cd31840aa9dea9ee2844f8, type: 3}
       propertyPath: m_RootOrder
       value: 10

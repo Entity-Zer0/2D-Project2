@@ -8,6 +8,8 @@ public class EnemyBreachers : CharacterBase
     public GameObject thisObject;
     public float speed;
 
+    public GameManager manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class EnemyBreachers : CharacterBase
         DisplayHealth();
         Health();
         //Display
-        //manager = FindObjectOfType<GameManager>();
+        manager = FindObjectOfType<GameManager>();
         thisObject.transform.position += VectorToTower() * speed;
     }
 
@@ -45,7 +47,7 @@ public class EnemyBreachers : CharacterBase
     {
         if (health <= 0)
         {
-            //gameManager.enemyCounter--;
+            manager.enemyCounter--;
             Destroy(gameObject);
         }
     }

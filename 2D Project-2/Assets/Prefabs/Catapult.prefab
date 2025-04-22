@@ -236,7 +236,7 @@ MonoBehaviour:
   health: 30
   displayHealth: {fileID: 2715808796007885294}
   gameManager: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 7716287069444752599, guid: 2e1396ec062e92549a0069aad363380f, type: 3}
   spawnTimer: 0
   spawnInterval: 2
 --- !u!58 &2715808796892913690
