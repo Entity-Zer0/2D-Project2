@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
 {
     public GameObject player;
     public float speed = 0.5f;
+    // public int wood = 0;
+    // public int stone = 0;
+    // public int oil = 0;
 
     public Dictionary<string, int> myInvDict = new Dictionary<string, int>();
 

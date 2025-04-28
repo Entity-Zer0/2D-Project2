@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6085307521403536817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.8, y: 0.4, z: 0}
-  m_LocalScale: {x: 6.4649477, y: 6.4649477, z: 6.4649477}
+  m_LocalScale: {x: 16.99733, y: 16.390665, z: 11.917603}
   m_Children:
   - {fileID: 6085307522592991916}
   m_Father: {fileID: 0}
@@ -101,7 +101,8 @@ MonoBehaviour:
   characterName: 
   health: 100
   displayHealth: {fileID: 6085307521555067472}
-  projectile: {fileID: 0}
+  gameManager: {fileID: 0}
+  projectile: {fileID: 4795596510232282003, guid: be3136de00b74d4439132e20d846fe79, type: 3}
   spawnTimer: 0
   spawnInterval: 1
 --- !u!61 &6085307521403536829
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_text: text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
