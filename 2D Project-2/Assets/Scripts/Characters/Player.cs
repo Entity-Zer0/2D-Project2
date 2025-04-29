@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     public TextMeshProUGUI inventoryDisplay;
 
+    public GameObject tower;
+
 
     // Start is called before the first frame update
     public void Awake()
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 targetPos = new Vector3 (-46, -16, 0);
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -58,6 +61,16 @@ public class Player : MonoBehaviour
             player.transform.position += Vector3.right * speed;
             //Debug.Log("D Pressed");
         }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            if (myInvDict["Tower"] >= 1)
+            {
+                Instantiate(tower, targetPos, Quaternion.identity);
+                myInvDict["Tower"] -= 1;
+            }
+            
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,6 +83,22 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Death")
         {
             Destroy(player);
+        }
+    }
+
+    void OnTriggerStay2D (Collider2D other)
+    {
+        if (other.gameObject.tag == "Craft" && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Enter craft");
+            if (myInvDict["Wood"] >= 5 && myInvDict["Stone"] >= 5 && myInvDict["Oil"] >= 3)
+            {
+                Debug.Log("Flint and steal");
+                myInvDict["Wood"] -= 5;
+                myInvDict["Stone"] -= 5;
+                myInvDict["Oil"] -= 3;
+                myInvDict.Add("Tower", 1);
+            }
         }
     }
 
