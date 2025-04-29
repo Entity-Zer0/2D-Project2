@@ -17,13 +17,12 @@ public class Craft : MonoBehaviour
     void Start()
     {
         myPlayer = FindObjectOfType<Player>();
-        craft.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (craftEnabled == true && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (myPlayer.myInvDict["Wood"] >= 5 && myPlayer.myInvDict["Stone"] >= 5 && myPlayer.myInvDict["Oil"] >= 3)
             {
@@ -33,20 +32,5 @@ public class Craft : MonoBehaviour
                 myPlayer.myInvDict.Add("Tower", 1);
             }
         }
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        craft.SetActive(true);
-        craftEnabled = true;
-        /* if (Input.GetKeyDown(KeyCode.Space))
-         {
-             AddItem();
-         }*/
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        craft.SetActive(false);
-        craftEnabled = false;
     }
 }
