@@ -5,12 +5,13 @@ using UnityEngine;
 public class Resources : MonoBehaviour
 {
     public string itemName;
-    public int objectIndex;
 
     public Player myPlayer;
     public int itemNumber = 1;
 
     public GameObject pickUp;
+
+    public bool pickUpEnabled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +23,25 @@ public class Resources : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (pickUpEnabled == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            AddItem();
+        }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
         pickUp.SetActive(true);
-        if (Input.GetKey(KeyCode.Space))
+        pickUpEnabled = true;
+       /* if (Input.GetKeyDown(KeyCode.Space))
         {
             AddItem();
-        }
+        }*/
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        pickUp.SetActive(false);
+        pickUpEnabled = false;
     }
     public void AddItem()
     {
